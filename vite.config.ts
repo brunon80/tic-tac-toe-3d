@@ -3,6 +3,9 @@ import { defineConfig } from 'vitest/config'
 
 export default defineConfig({
   plugins: [react()],
+  // relative asset URLs: the same dist/ works at the Pages subpath, at any root,
+  // and straight off disk — no per-host base path needed.
+  base: './',
   build: {
     target: 'es2023',
     sourcemap: true,
